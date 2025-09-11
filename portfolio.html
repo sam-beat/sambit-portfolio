@@ -3,191 +3,210 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Sambit Kumar Behera | Portfolio</title>
+    <title>Sambit Kumar Behera - Portfolio</title>
     <script src="https://cdn.tailwindcss.com"></script>
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <link rel="stylesheet" href="style.css">
 </head>
-<body class="bg-gray-900 text-white leading-relaxed">
-    <div class="container mx-auto px-4 py-8 max-w-7xl">
+<body class="bg-gray-900 text-gray-200 antialiased">
 
-        <!-- Header and Navigation -->
-        <header class="flex justify-between items-center py-6 md:py-8 sticky top-0 bg-gray-900/80 backdrop-blur-md z-50 rounded-xl px-6">
-            <a href="#" class="text-3xl font-bold text-transparent bg-clip-text bg-gradient-to-r from-blue-400 to-cyan-400">Sambit Behera</a>
-            <nav class="hidden md:flex space-x-8">
-                <a href="#about" class="text-gray-300 hover:text-white transition-colors duration-300">About</a>
-                <a href="#projects" class="text-gray-300 hover:text-white transition-colors duration-300">Projects</a>
-                <a href="#skills" class="text-gray-300 hover:text-white transition-colors duration-300">Skills</a>
-                <a href="#contact" class="text-gray-300 hover:text-white transition-colors duration-300">Contact</a>
+    <!-- Header & Navigation -->
+    <header class="bg-gray-900/80 backdrop-blur-sm fixed w-full z-50 top-0 left-0 border-b border-gray-700">
+        <div class="container mx-auto px-6 py-4 flex justify-between items-center">
+            <a href="#" class="text-2xl font-bold gradient-text">SKB</a>
+            <nav class="hidden md:flex space-x-8 items-center">
+                <a href="#about" class="hover:text-pink-400 transition-colors">About</a>
+                <a href="#experience" class="hover:text-pink-400 transition-colors">Experience</a>
+                <a href="#projects" class="hover:text-pink-400 transition-colors">Projects</a>
+                <a href="#skills" class="hover:text-pink-400 transition-colors">Skills</a>
+                <a href="#contact" class="bg-indigo-600 hover:bg-indigo-700 text-white font-semibold px-4 py-2 rounded-lg transition-colors">Contact Me</a>
             </nav>
-            <div class="md:hidden">
-                <!-- Mobile menu toggle button -->
-                <button id="mobile-menu-button" class="text-white focus:outline-none">
-                    <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-7 6h7"></path>
-                    </svg>
-                </button>
-            </div>
-        </header>
+            <button id="mobile-menu-btn" class="md:hidden focus:outline-none">
+                <i class="fas fa-bars text-2xl"></i>
+            </button>
+        </div>
+        <!-- Mobile Menu -->
+        <div id="mobile-menu" class="hidden md:hidden">
+            <a href="#about" class="block py-2 px-6 text-sm hover:bg-gray-800">About</a>
+            <a href="#experience" class="block py-2 px-6 text-sm hover:bg-gray-800">Experience</a>
+            <a href="#projects" class="block py-2 px-6 text-sm hover:bg-gray-800">Projects</a>
+            <a href="#skills" class="block py-2 px-6 text-sm hover:bg-gray-800">Skills</a>
+            <a href="#contact" class="block py-2 px-6 text-sm hover:bg-gray-800">Contact</a>
+        </div>
+    </header>
 
-        <!-- Mobile menu -->
-        <nav id="mobile-menu" class="hidden md:hidden bg-gray-800 rounded-xl mt-4 px-6 py-4">
-            <ul class="flex flex-col space-y-4 text-center">
-                <li><a href="#about" class="block py-2 text-gray-300 hover:text-white transition-colors duration-300">About</a></li>
-                <li><a href="#projects" class="block py-2 text-gray-300 hover:text-white transition-colors duration-300">Projects</a></li>
-                <li><a href="#skills" class="block py-2 text-gray-300 hover:text-white transition-colors duration-300">Skills</a></li>
-                <li><a href="#contact" class="block py-2 text-gray-300 hover:text-white transition-colors duration-300">Contact</a></li>
-            </ul>
-        </nav>
-
-        <main class="mt-12 md:mt-16">
-            <!-- Hero Section -->
-            <section id="hero" class="text-center py-20 md:py-28 lg:py-32 bg-gray-800 rounded-3xl shadow-2xl bg-gradient-to-br from-gray-800 to-gray-700">
-                <div class="mx-auto max-w-3xl px-4">
-                    <h1 class="text-4xl md:text-6xl lg:text-7xl font-extrabold mb-4 text-white drop-shadow-md">
-                        Sambit Kumar Behera
+    <main class="pt-20">
+        <!-- Hero Section -->
+        <section id="home" class="relative min-h-screen flex items-center bg-pattern">
+            <div class="container mx-auto px-6 text-center">
+                <div class="fade-in">
+                    <h1 class="text-5xl md:text-7xl font-extrabold mb-4">
+                        Hi, I'm <span class="gradient-text">Sambit Kumar Behera</span>
                     </h1>
-                    <p class="text-lg md:text-2xl font-light text-gray-300 mb-8 animated-text" id="tagline"></p>
-                    <a href="#contact" class="inline-block px-8 py-3 bg-blue-500 hover:bg-blue-600 text-white font-semibold rounded-full shadow-lg transition-all duration-300 transform hover:scale-105">
-                        Get In Touch
-                    </a>
-                </div>
-            </section>
-
-            <!-- About Section -->
-            <section id="about" class="py-16 md:py-24">
-                <div class="max-w-4xl mx-auto px-4">
-                    <h2 class="text-4xl md:text-5xl font-bold mb-8 text-center text-transparent bg-clip-text bg-gradient-to-r from-blue-400 to-cyan-400">About Me</h2>
-                    <div class="flex flex-col md:flex-row items-center md:space-x-12">
-                        <img src="https://placehold.co/400x400/1E90FF/FFFFFF?text=S.B." alt="Profile Picture of Sambit Behera" class="rounded-full w-48 h-48 md:w-64 md:h-64 mb-8 md:mb-0 border-4 border-blue-500 shadow-xl">
-                        <div class="text-lg text-gray-300 text-center md:text-left">
-                            <p class="mb-4">I am a results-driven and adaptable Software Development Engineer with a strong passion for secure and efficient solutions. My expertise lies in **C++**, problem-solving, and designing scalable systems. I take full ownership of my work and am committed to continuously raising the bar for software quality and performance.</p>
-                            <p>My work at Fiery Digital Imaging and Samsung Research has provided me with invaluable experience in desktop application development, documentation, and cross-functional collaboration. I am always eager to learn new technologies and deliver customer-centric solutions that make a real impact.</p>
-                        </div>
-                    </div>
-                </div>
-            </section>
-
-            <!-- Projects Section -->
-            <section id="projects" class="py-16 md:py-24">
-                <h2 class="text-4xl md:text-5xl font-bold mb-12 text-center text-transparent bg-clip-text bg-gradient-to-r from-blue-400 to-cyan-400">My Projects</h2>
-                <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8 px-4">
-                    <!-- Project Card 1: Samsung Log Analyzer -->
-                    <div class="bg-gray-800 rounded-xl overflow-hidden shadow-xl p-6 project-card">
-                        <img src="https://placehold.co/600x400/2C3E50/FFFFFF?text=Log+Analyzer+Tool" alt="Smart Log Analyzer Tool" class="w-full h-48 object-cover rounded-lg mb-4">
-                        <h3 class="text-2xl font-semibold mb-2 text-transparent bg-clip-text bg-gradient-to-r from-blue-300 to-cyan-300">Smart Log Analyzer</h3>
-                        <p class="text-gray-400 text-sm mb-4">A high-impact desktop application developed to streamline the analysis of network logs. The tool integrates with MongoDB to facilitate efficient data retrieval, reducing log analysis efforts by 40% with flexible filtering and time-based sorting.</p>
-                        <div class="flex flex-wrap gap-2 mb-4">
-                            <span class="bg-gray-700 text-gray-300 text-xs px-2 py-1 rounded-full">Desktop App</span>
-                            <span class="bg-gray-700 text-gray-300 text-xs px-2 py-1 rounded-full">MongoDB</span>
-                            <span class="bg-gray-700 text-gray-300 text-xs px-2 py-1 rounded-full">Software Documentation</span>
-                        </div>
-                        <a href="#" class="text-blue-400 hover:text-blue-500 font-medium transition-colors duration-300">View Project &rarr;</a>
-                    </div>
-                    <!-- Project Card 2: PDF Generation -->
-                    <div class="bg-gray-800 rounded-xl overflow-hidden shadow-xl p-6 project-card">
-                        <img src="https://placehold.co/600x400/8E44AD/FFFFFF?text=PDF+Generator" alt="PDF Generation Program" class="w-full h-48 object-cover rounded-lg mb-4">
-                        <h3 class="text-2xl font-semibold mb-2 text-transparent bg-clip-text bg-gradient-to-r from-blue-300 to-cyan-300">Custom PDF Generation</h3>
-                        <p class="text-gray-400 text-sm mb-4">Developed a robust single-page PDF generation program using a custom C++ library, ensuring support for multilingual content and diverse fonts. This project also involved updating open-source libraries to resolve security vulnerabilities flagged by Black Duck scans.</p>
-                        <div class="flex flex-wrap gap-2 mb-4">
-                            <span class="bg-gray-700 text-gray-300 text-xs px-2 py-1 rounded-full">C++</span>
-                            <span class="bg-gray-700 text-gray-300 text-xs px-2 py-1 rounded-full">PDF</span>
-                            <span class="bg-gray-700 text-gray-300 text-xs px-2 py-1 rounded-full">Debugging</span>
-                        </div>
-                        <a href="#" class="text-blue-400 hover:text-blue-500 font-medium transition-colors duration-300">View Project &rarr;</a>
-                    </div>
-                    <!-- Project Card 3: Video Summarization -->
-                    <div class="bg-gray-800 rounded-xl overflow-hidden shadow-xl p-6 project-card">
-                        <img src="https://placehold.co/600x400/E74C3C/FFFFFF?text=Video+Summarization" alt="Video Summarization Project" class="w-full h-48 object-cover rounded-lg mb-4">
-                        <h3 class="text-2xl font-semibold mb-2 text-transparent bg-clip-text bg-gradient-to-r from-blue-300 to-cyan-300">Video Summarization (GOA)</h3>
-                        <p class="text-gray-400 text-sm mb-4">Adapted and executed a video summarization algorithm using the Grasshopper Optimization Algorithm (GOA). The project extracted key frames and resulted in a 4.04% increase in F-score compared to the existing algorithm, demonstrating optimized performance.</p>
-                        <div class="flex flex-wrap gap-2 mb-4">
-                            <span class="bg-gray-700 text-gray-300 text-xs px-2 py-1 rounded-full">Python</span>
-                            <span class="bg-gray-700 text-gray-300 text-xs px-2 py-1 rounded-full">OpenCV</span>
-                            <span class="bg-gray-700 text-gray-300 text-xs px-2 py-1 rounded-full">Scikit-learn</span>
-                        </div>
-                        <a href="#" class="text-blue-400 hover:text-blue-500 font-medium transition-colors duration-300">View Project &rarr;</a>
-                    </div>
-                </div>
-            </section>
-
-            <!-- Skills Section -->
-            <section id="skills" class="py-16 md:py-24">
-                <h2 class="text-4xl md:text-5xl font-bold mb-12 text-center text-transparent bg-clip-text bg-gradient-to-r from-blue-400 to-cyan-400">My Skills</h2>
-                <div class="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-6 gap-8 text-center px-4">
-                    <!-- C++ Skill -->
-                    <div class="flex flex-col items-center p-4 rounded-xl bg-gray-800 shadow-xl transition-all duration-300 hover:bg-gray-700 skill-icon">
-                        <div class="w-12 h-12 flex items-center justify-center mb-2">
-                            <svg xmlns="http://www.w3.org/2000/svg" width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-code-2 text-cyan-400"><path d="m18 2-4 4-2.5-2.5L7.5 7.5 10 10l-4 4-4-4"/><path d="m14 14-4-4"/><path d="m18 6 4 4"/></svg>
-                        </div>
-                        <p class="text-sm font-medium text-gray-300">C++</p>
-                    </div>
-                    <!-- SQL Skill -->
-                    <div class="flex flex-col items-center p-4 rounded-xl bg-gray-800 shadow-xl transition-all duration-300 hover:bg-gray-700 skill-icon">
-                        <div class="w-12 h-12 flex items-center justify-center mb-2">
-                           <svg xmlns="http://www.w3.org/2000/svg" width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-database-zap text-orange-400"><path d="M12 2a9 9 0 0 1 9 9v3H3v-3a9 9 0 0 1 9-9z"/><path d="M3 15v-3"/><path d="M21 15v-3"/><path d="M12 22v-7"/><path d="M12 15v-3"/><path d="M12 15v-3"/><path d="m17 19-3-2"/></svg>
-                        </div>
-                        <p class="text-sm font-medium text-gray-300">SQL</p>
-                    </div>
-                    <!-- Java Skill -->
-                    <div class="flex flex-col items-center p-4 rounded-xl bg-gray-800 shadow-xl transition-all duration-300 hover:bg-gray-700 skill-icon">
-                        <div class="w-12 h-12 flex items-center justify-center mb-2">
-                           <svg xmlns="http://www.w3.org/2000/svg" width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-coffee text-rose-400"><path d="M10 2c-2.2 0-4 1.8-4 4v2c0 1.1-.9 2-2 2H2c-1.1 0-2 .9-2 2v4c0 1.1.9 2 2 2h4c1.1 0 2-.9 2-2v-4c0-1.1.9-2 2-2h4c1.1 0 2-.9 2-2V4c0-2.2-1.8-4-4-4H10z"/><path d="M14 12c.5 0 1-.2 1.4-.6.4-.4.6-.9.6-1.4V8c0-1.1-.9-2-2-2h-4c-1.1 0-2 .9-2 2v2c0 1.1.9 2 2 2h4z"/><path d="M10 12v-2c0-1.1-.9-2-2-2H6c-1.1 0-2 .9-2 2v2"/></svg>
-                        </div>
-                        <p class="text-sm font-medium text-gray-300">Java</p>
-                    </div>
-                    <!-- MongoDB Skill -->
-                    <div class="flex flex-col items-center p-4 rounded-xl bg-gray-800 shadow-xl transition-all duration-300 hover:bg-gray-700 skill-icon">
-                        <div class="w-12 h-12 flex items-center justify-center mb-2">
-                            <svg xmlns="http://www.w3.org/2000/svg" width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-database text-green-400"><ellipse cx="12" cy="5" rx="9" ry="3"/><path d="M21 12c0 1.66-4 3-9 3s-9-1.34-9-3"/><path d="M21 12v6c0 1.66-4 3-9 3s-9-1.34-9-3v-6"/></svg>
-                        </div>
-                        <p class="text-sm font-medium text-gray-300">MongoDB</p>
-                    </div>
-                    <!-- Git Skill -->
-                    <div class="flex flex-col items-center p-4 rounded-xl bg-gray-800 shadow-xl transition-all duration-300 hover:bg-gray-700 skill-icon">
-                        <div class="w-12 h-12 flex items-center justify-center mb-2">
-                           <svg xmlns="http://www.w3.org/2000/svg" width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-git-branch text-blue-400"><circle cx="12" cy="18" r="3"/><path d="M7.5 7.5a3.5 3.5 0 1 0 0-5A3.5 3.5 0 0 0 7.5 7.5ZM18.5 7.5a3.5 3.5 0 1 0 0-5A3.5 3.5 0 0 0 18.5 7.5Z"/><path d="M12 15v-3c0-1.1.9-2 2-2h3c.8 0 1.5.7 1.5 1.5v7.71"/><path d="M6 10.5c0-.8.7-1.5 1.5-1.5h1a.5.5 0 0 1 .5.5v1a.5.5 0 0 1-.5.5H7.5"/><path d="M12 15V9.42"/><path d="m14 12-2 2-2-2"/></svg>
-                        </div>
-                        <p class="text-sm font-medium text-gray-300">Git</p>
-                    </div>
-                    <!-- Python Skill -->
-                    <div class="flex flex-col items-center p-4 rounded-xl bg-gray-800 shadow-xl transition-all duration-300 hover:bg-gray-700 skill-icon">
-                        <div class="w-12 h-12 flex items-center justify-center mb-2">
-                            <svg xmlns="http://www.w3.org/2000/svg" width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-python text-yellow-500"><path d="M12 12c-1.1 0-2-.9-2-2V4c0-1.1.9-2 2-2h2c1.1 0 2 .9 2 2v2h2c1.1 0 2 .9 2 2v2c0 1.1-.9 2-2 2h-2c-1.1 0-2-.9-2-2V8h-2V6h-2c-1.1 0-2 .9-2 2v2c0 1.1.9 2 2 2h2v2c0 1.1-.9 2-2 2h-2c-1.1 0-2 .9-2 2v2c0 1.1.9 2 2 2h2c1.1 0 2-.9 2-2v-2h2v-2c0-1.1.9-2 2-2h2c1.1 0 2 .9 2 2v2c0 1.1-.9 2-2 2H12z"/></svg>
-                        </div>
-                        <p class="text-sm font-medium text-gray-300">Python</p>
-                    </div>
-                </div>
-            </section>
-
-            <!-- Contact Section -->
-            <section id="contact" class="py-16 md:py-24">
-                <h2 class="text-4xl md:text-5xl font-bold mb-12 text-center text-transparent bg-clip-text bg-gradient-to-r from-blue-400 to-cyan-400">Get In Touch</h2>
-                <div class="max-w-xl mx-auto text-center px-4">
-                    <p class="text-lg text-gray-300 mb-8">
-                        I'm currently open to new opportunities. Whether you have a project idea or just want to chat, feel free to reach out.
+                    <p class="text-xl md:text-2xl text-gray-300 mb-8 max-w-3xl mx-auto">
+                        A results-driven Software Development Engineer specializing in C++, problem-solving, and scalable system design.
                     </p>
-                    <div class="bg-gray-800 rounded-xl p-6 shadow-xl inline-flex items-center space-x-4">
-                        <p id="email-text" class="text-lg md:text-xl font-medium text-white select-all">sambitbehera.mnnit@gmail.com</p>
-                        <button id="copy-email-button" class="bg-blue-600 hover:bg-blue-700 p-2 rounded-full text-white transition-all duration-300 transform hover:scale-110" title="Copy email address">
-                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-copy w-6 h-6"><rect width="14" height="14" x="8" y="8" rx="2" ry="2"/><path d="M4 16c-1.1 0-2-.9-2-2V4c0-1.1.9-2 2-2h10c1.1 0 2 .9 2 2v1"/></svg>
-                        </button>
+                    <div class="flex justify-center items-center space-x-4">
+                        <a href="mailto:sambitbehera.mnnit@gmail.com" class="text-gray-400 hover:text-pink-400 transition-colors"><i class="fas fa-envelope text-2xl"></i></a>
+                        <span class="text-gray-600">|</span>
+                        <a href="tel:+919348774322" class="text-gray-400 hover:text-pink-400 transition-colors"><i class="fas fa-phone text-2xl"></i></a>
+                        <span class="text-gray-600">|</span>
+                        <a href="https://github.com/sam-beat" target="_blank" rel="noopener noreferrer" class="text-gray-400 hover:text-pink-400 transition-colors"><i class="fab fa-github text-2xl"></i></a>
+                         <span class="text-gray-600">|</span>
+                        <a href="https://www.linkedin.com/in/sambeat/" target="_blank" rel="noopener noreferrer" class="text-gray-400 hover:text-pink-400 transition-colors"><i class="fab fa-linkedin text-2xl"></i></a>
                     </div>
-                    <div id="copy-message" class="mt-4 text-green-400 font-semibold opacity-0 transition-opacity duration-300">
-                        Email copied to clipboard!
+                    <a href="#projects" class="mt-12 inline-block bg-pink-600 hover:bg-pink-700 text-white font-bold py-3 px-8 rounded-lg text-lg transition-transform transform hover:scale-105">View My Work</a>
+                </div>
+            </div>
+        </section>
+
+        <!-- About Section -->
+        <section id="about" class="py-20 bg-gray-900">
+            <div class="container mx-auto px-6">
+                <h2 class="text-4xl font-bold text-center mb-12 gradient-text">About Me</h2>
+                <div class="max-w-4xl mx-auto text-center text-lg text-gray-300 leading-relaxed">
+                    <p>
+                        I am an adaptable Software Development Engineer with a strong foundation in C++ and a passion for creating efficient, scalable, and secure software solutions. With a proven ability to take ownership of projects, I thrive on tackling complex challenges and continuously raising the bar for quality. My experience spans from critical library development to building robust debugging infrastructures. I am a lifelong learner, a collaborative team player, and always focused on delivering customer-centric results. I'm particularly interested in Artificial Intelligence, System Design, and Web Development.
+                    </p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Experience Section -->
+        <section id="experience" class="py-20 bg-gray-800/50">
+            <div class="container mx-auto px-6">
+                <h2 class="text-4xl font-bold text-center mb-12 gradient-text">Work Experience</h2>
+                <div class="relative border-l-4 border-indigo-500 pl-10">
+                    <!-- Fiery Digital Imaging -->
+                    <div class="mb-12">
+                        <div class="absolute w-6 h-6 bg-pink-500 rounded-full -left-3.5 border-4 border-gray-900"></div>
+                        <p class="text-sm text-gray-400">Aug 2023 - Present</p>
+                        <h3 class="text-2xl font-bold text-pink-400">Software Development Engineer</h3>
+                        <p class="text-lg font-semibold text-gray-300">Fiery Digital Imaging India, Bangalore</p>
+                        <ul class="mt-4 list-disc list-inside text-gray-300 space-y-2">
+                            <li>Took ownership of a critical PDF library Module, ensuring robust, high-performance & on-time releases.</li>
+                            <li>Resolved security vulnerabilities by updating vulnerable open-source libraries in a server application.</li>
+                            <li>Developed a robust single-page PDF generation program with multilingual support.</li>
+                            <li>Created a scalable debugging infrastructure, reducing API-level troubleshooting time by 50%.</li>
+                            <li>Gained in-depth knowledge of PDF structure, internals, and debugging techniques.</li>
+                        </ul>
+                    </div>
+                    <!-- Samsung Research Institute -->
+                    <div>
+                        <div class="absolute w-6 h-6 bg-pink-500 rounded-full -left-3.5 border-4 border-gray-900"></div>
+                        <p class="text-sm text-gray-400">May 2022 - Jul 2022</p>
+                        <h3 class="text-2xl font-bold text-pink-400">Software Engineering Intern</h3>
+                        <p class="text-lg font-semibold text-gray-300">Samsung Research Institute Bangalore</p>
+                        <ul class="mt-4 list-disc list-inside text-gray-300 space-y-2">
+                            <li>Delivered a high-impact Smart Log Analyzer tool (Desktop Application).</li>
+                            <li>Integrated MongoDB for streamlined database management and efficient log data retrieval.</li>
+                            <li>Developed flexible filtering and time-based sorting, reducing log retrieval efforts by 40%.</li>
+                            <li>Contributed to cross-functional collaboration, code reviews, and documentation.</li>
+                        </ul>
                     </div>
                 </div>
-            </section>
-        </main>
+            </div>
+        </section>
 
-        <!-- Footer -->
-        <footer class="text-center py-8 text-gray-500 text-sm mt-12">
-            <p>&copy; 2024 Sambit Kumar Behera. All rights reserved.</p>
-        </footer>
-    </div>
+        <!-- Projects Section -->
+        <section id="projects" class="py-20 bg-gray-900">
+            <div class="container mx-auto px-6">
+                <h2 class="text-4xl font-bold text-center mb-12 gradient-text">University Project</h2>
+                <div class="max-w-4xl mx-auto bg-gray-800 rounded-2xl p-8 card-hover shadow-indigo-500/20">
+                    <h3 class="text-2xl font-bold text-pink-400 mb-2">Video Summarization using Grasshopper Optimization Algorithm (GOA)</h3>
+                    <p class="text-gray-400 mb-4">Jan 2023 - May 2023</p>
+                    <p class="text-gray-300 mb-4">
+                        This project focused on generating efficient and concise video summaries. We adapted and executed an existing video summarization algorithm, leveraging the Grasshopper Optimization Algorithm to create summaries that were just 15% of the original video's length while retaining 100% of the key content.
+                    </p>
+                    <ul class="list-disc list-inside text-gray-300 space-y-2 mb-4">
+                        <li>Utilized the Object of Interest Similarity (OOIS) technique to extract key frames.</li>
+                        <li>Fine-tuned the algorithm to optimize summarization, achieving an F-score of 0.334.</li>
+                        <li>Demonstrated a 4.04% increase in F-score compared to the existing algorithm.</li>
+                    </ul>
+                    <div class="flex flex-wrap gap-2">
+                        <span class="bg-indigo-600/50 text-indigo-200 text-sm font-semibold px-3 py-1 rounded-full">Python</span>
+                        <span class="bg-indigo-600/50 text-indigo-200 text-sm font-semibold px-3 py-1 rounded-full">OpenCV</span>
+                        <span class="bg-indigo-600/50 text-indigo-200 text-sm font-semibold px-3 py-1 rounded-full">Scikit-learn</span>
+                        <span class="bg-indigo-600/50 text-indigo-200 text-sm font-semibold px-3 py-1 rounded-full">Pandas</span>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Skills Section -->
+        <section id="skills" class="py-20 bg-gray-800/50">
+            <div class="container mx-auto px-6">
+                <h2 class="text-4xl font-bold text-center mb-12 gradient-text">Technical Skills</h2>
+                <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 text-center">
+                    <div class="bg-gray-800 p-6 rounded-2xl card-hover shadow-pink-500/20">
+                        <i class="fas fa-code text-4xl text-pink-400 mb-4"></i>
+                        <h3 class="text-xl font-bold mb-2">Languages</h3>
+                        <p class="text-gray-300">C/C++, SQL, Java, javascript</p>
+                    </div>
+                    <div class="bg-gray-800 p-6 rounded-2xl card-hover shadow-pink-500/20">
+                        <i class="fas fa-book text-4xl text-pink-400 mb-4"></i>
+                        <h3 class="text-xl font-bold mb-2">Core Subjects</h3>
+                        <p class="text-gray-300">Operating System, DBMS, Computer Networks, OOP</p>
+                    </div>
+                    <div class="bg-gray-800 p-6 rounded-2xl card-hover shadow-pink-500/20">
+                        <i class="fas fa-tools text-4xl text-pink-400 mb-4"></i>
+                        <h3 class="text-xl font-bold mb-2">Tools & Platforms</h3>
+                        <p class="text-gray-300">Visual Studio, VS Code, Git, MongoDB</p>
+                    </div>
+                    <div class="bg-gray-800 p-6 rounded-2xl card-hover shadow-indigo-500/20 lg:col-span-3">
+                        <i class="fas fa-star text-4xl text-indigo-400 mb-4"></i>
+                        <h3 class="text-xl font-bold mb-2">Strengths</h3>
+                        <p class="text-gray-300">Data Structures & Algorithms, Problem Solving, Debugging</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+         <!-- Education Section -->
+        <section id="education" class="py-20 bg-gray-900">
+            <div class="container mx-auto px-6 text-center">
+                <h2 class="text-4xl font-bold mb-12 gradient-text">Education</h2>
+                <div class="inline-block bg-gray-800 p-8 rounded-2xl card-hover shadow-indigo-500/20">
+                    <h3 class="text-2xl font-bold text-pink-400">Motilal Nehru National Institute Of Technology Allahabad</h3>
+                    <p class="text-lg text-gray-300 mt-2">Bachelor of Technology in Computer Science & Engineering</p>
+                    <p class="text-gray-400 mt-1">May 2019 - Jun 2023</p>
+                    <p class="text-gray-400 mt-1">CGPA: 8.01/10.0</p>
+                </div>
+            </div>
+        </section>
+
+
+        <!-- Contact Section -->
+        <section id="contact" class="py-20 bg-gray-800/50">
+            <div class="container mx-auto px-6">
+                <h2 class="text-4xl font-bold text-center mb-4 gradient-text">Get In Touch</h2>
+                <p class="text-center text-gray-300 max-w-2xl mx-auto mb-12">I'm currently open to new opportunities. If you have a project in mind or just want to say hi, feel free to reach out!</p>
+                
+                <div class="max-w-lg mx-auto text-center">
+                    <a href="mailto:sambitbehera.mnnit@gmail.com" class="text-2xl font-semibold text-pink-400 hover:underline">
+                        sambitbehera.mnnit@gmail.com
+                    </a>
+                    <p class="text-gray-300 mt-4 text-lg">+91 9348774322, +91 8765174763</p>
+                    <p class="text-gray-300 mt-1 text-lg">Bengaluru, India</p>
+
+                     <div class="flex justify-center items-center space-x-6 mt-8">
+                        <a href="https://github.com/sam-beat" target="_blank" rel="noopener noreferrer" class="text-gray-400 hover:text-pink-400 transition-colors text-3xl"><i class="fab fa-github"></i></a>
+                        <a href="https://www.linkedin.com/in/sambeat/" target="_blank" rel="noopener noreferrer" class="text-gray-400 hover:text-pink-400 transition-colors text-3xl"><i class="fab fa-linkedin"></i></a>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="bg-gray-900 border-t border-gray-700">
+        <div class="container mx-auto px-6 py-6 text-center text-gray-400">
+            <p>&copy; 2024 Sambit Kumar Behera. All Rights Reserved.</p>
+        </div>
+    </footer>
 
     <script src="scripts.js"></script>
 </body>
 </html>
+
