@@ -30,3 +30,34 @@ const observer = new IntersectionObserver((entries, observer) => {
 sections.forEach(section => {
     observer.observe(section);
 });
+
+  const carousel = document.getElementById("carousel-inner");
+  const slides = carousel.children;
+  const totalSlides = slides.length;
+  let index = 1; // start at first real slide
+
+  // Set initial position
+  carousel.style.transform = `translateX(-${index * 100}%)`;
+
+  function moveSlide(step) {
+    index += step;
+    carousel.style.transition = "transform 0.7s ease-in-out";
+    carousel.style.transform = `translateX(-${index * 100}%)`;
+
+    carousel.addEventListener("transitionend", () => {
+      if (index === totalSlides - 1) {
+        // Jump to first real slide
+        carousel.style.transition = "none";
+        index = 1;
+        carousel.style.transform = `translateX(-${index * 100}%)`;
+      } else if (index === 0) {
+        // Jump to last real slide
+        carousel.style.transition = "none";
+        index = totalSlides - 2;
+        carousel.style.transform = `translateX(-${index * 100}%)`;
+      }
+    }, { once: true });
+  }
+
+  document.getElementById("prevBtn").addEventListener("click", () => moveSlide(-1));
+  document.getElementById("nextBtn").addEventListener("click", () => moveSlide(1));

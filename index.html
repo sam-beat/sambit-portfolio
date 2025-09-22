@@ -136,31 +136,67 @@
   </div>
 </section>
 
+<!-- Projects Section -->
+<section id="projects" class="py-20 bg-gray-900">
+  <div class="container mx-auto px-6">
+    <h2 class="text-4xl font-bold text-center mb-12 gradient-text">Projects</h2>
 
-        <!-- Projects Section -->
-        <section id="projects" class="py-20 bg-gray-900">
-            <div class="container mx-auto px-6">
-                <h2 class="text-4xl font-bold text-center mb-12 gradient-text">University Project</h2>
-                <div class="max-w-4xl mx-auto bg-gray-800 rounded-2xl p-8 card-hover shadow-indigo-500/20">
-                    <h3 class="text-2xl font-bold text-pink-400 mb-2">Video Summarization using Grasshopper Optimization Algorithm (GOA)</h3>
-                    <p class="text-gray-400 mb-4">Jan 2023 - May 2023</p>
-                    <p class="text-gray-300 mb-4">
-                        This project focused on generating efficient and concise video summaries. We adapted and executed an existing video summarization algorithm, leveraging the Grasshopper Optimization Algorithm to create summaries that were just 15% of the original video's length while retaining 100% of the key content.
-                    </p>
-                    <ul class="list-disc list-inside text-gray-300 space-y-2 mb-4">
-                        <li>Utilized the Object of Interest Similarity (OOIS) technique to extract key frames.</li>
-                        <li>Fine-tuned the algorithm to optimize summarization, achieving an F-score of 0.334.</li>
-                        <li>Demonstrated a 4.04% increase in F-score compared to the existing algorithm.</li>
-                    </ul>
-                    <div class="flex flex-wrap gap-2">
-                        <span class="bg-indigo-600/50 text-indigo-200 text-sm font-semibold px-3 py-1 rounded-full">Python</span>
-                        <span class="bg-indigo-600/50 text-indigo-200 text-sm font-semibold px-3 py-1 rounded-full">OpenCV</span>
-                        <span class="bg-indigo-600/50 text-indigo-200 text-sm font-semibold px-3 py-1 rounded-full">Scikit-learn</span>
-                        <span class="bg-indigo-600/50 text-indigo-200 text-sm font-semibold px-3 py-1 rounded-full">Pandas</span>
-                    </div>
-                </div>
-            </div>
-        </section>
+    <div class="relative max-w-2xl mx-auto flex items-center">
+      <!-- Left Button -->
+      <button id="prevBtn" class="bg-gray-800 hover:bg-gray-700 text-white p-3 rounded-full shadow-lg mr-4">
+        <i class="fas fa-chevron-left"></i>
+      </button>
+
+      <!-- Carousel Wrapper -->
+      <div class="overflow-hidden w-full rounded-2xl">
+        <div id="carousel-inner" class="flex transition-transform duration-700 ease-in-out">
+          
+          <!-- CLONE of last slide (for smooth cyclic animation) -->
+          <div class="min-w-full bg-gray-800 p-8 card-hover shadow-indigo-500/20">
+            <h3 class="text-2xl font-bold text-pink-400 mb-2">PDF Cover Page Generator</h3>
+            <p class="text-gray-400 mb-2">Fiery (2024)</p>
+            <p class="text-gray-300 mb-4">Developed a robust C++ PDF library to dynamically generate multilingual cover pages with complex fonts and layouts.</p>
+          </div>
+
+          <!-- Project 1 -->
+          <div class="min-w-full bg-gray-800 p-8 card-hover shadow-indigo-500/20">
+            <h3 class="text-2xl font-bold text-pink-400 mb-2">Video Summarization (GOA)</h3>
+            <p class="text-gray-400 mb-2">Jan 2023 - May 2023</p>
+            <p class="text-gray-300 mb-4">Generated concise video summaries using Grasshopper Optimization Algorithm, achieving 15% video length while retaining 100% key content.</p>
+          </div>
+
+          <!-- Project 2 -->
+          <div class="min-w-full bg-gray-800 p-8 card-hover shadow-indigo-500/20">
+            <h3 class="text-2xl font-bold text-pink-400 mb-2">Smart Log Analyzer</h3>
+            <p class="text-gray-400 mb-2">Samsung Internship (2022)</p>
+            <p class="text-gray-300 mb-4">Built a C# desktop tool with MongoDB integration to analyze multiple logs concurrently, improving log retrieval efficiency by 40%.</p>
+          </div>
+
+          <!-- Project 3 -->
+          <div class="min-w-full bg-gray-800 p-8 card-hover shadow-indigo-500/20">
+            <h3 class="text-2xl font-bold text-pink-400 mb-2">PDF Cover Page Generator</h3>
+            <p class="text-gray-400 mb-2">Fiery (2024)</p>
+            <p class="text-gray-300 mb-4">Developed a robust C++ PDF library to dynamically generate multilingual cover pages with complex fonts and layouts.</p>
+          </div>
+
+          <!-- CLONE of first slide (for smooth cyclic animation) -->
+          <div class="min-w-full bg-gray-800 p-8 card-hover shadow-indigo-500/20">
+            <h3 class="text-2xl font-bold text-pink-400 mb-2">Video Summarization (GOA)</h3>
+            <p class="text-gray-400 mb-2">Jan 2023 - May 2023</p>
+            <p class="text-gray-300 mb-4">Generated concise video summaries using Grasshopper Optimization Algorithm, achieving 15% video length while retaining 100% key content.</p>
+          </div>
+
+        </div>
+      </div>
+
+      <!-- Right Button -->
+      <button id="nextBtn" class="bg-gray-800 hover:bg-gray-700 text-white p-3 rounded-full shadow-lg ml-4">
+        <i class="fas fa-chevron-right"></i>
+      </button>
+    </div>
+  </div>
+</section>
+
 
         <!-- Skills Section -->
         <section id="skills" class="py-20 bg-gray-800/50">
