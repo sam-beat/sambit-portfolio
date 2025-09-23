@@ -61,3 +61,51 @@ sections.forEach(section => {
 
   document.getElementById("prevBtn").addEventListener("click", () => moveSlide(-1));
   document.getElementById("nextBtn").addEventListener("click", () => moveSlide(1));
+document.addEventListener('DOMContentLoaded', () => {
+
+    // Mobile menu toggle
+    const mobileMenuBtn = document.getElementById('mobile-menu-btn');
+    const mobileMenu = document.getElementById('mobile-menu');
+    mobileMenuBtn.addEventListener('click', () => {
+        mobileMenu.classList.toggle('hidden');
+    });
+
+    // Close mobile menu on link click
+    document.querySelectorAll('#mobile-menu a').forEach(link => {
+        link.addEventListener('click', () => {
+            mobileMenu.classList.add('hidden');
+        });
+    });
+
+    // Intersection Observer for fade-in animations
+    const sections = document.querySelectorAll('section');
+    const options = {
+        threshold: 0.1,
+        rootMargin: "0px 0px -50px 0px"
+    };
+
+    const observer = new IntersectionObserver((entries, observer) => {
+        entries.forEach(entry => {
+            if (entry.isIntersecting) {
+                // Find the animatable element within the section
+                const animatableElement = entry.target.querySelector('div');
+                if (animatableElement) {
+                    animatableElement.classList.add('fade-in-up');
+                } else {
+                    entry.target.classList.add('fade-in-up');
+                }
+                observer.unobserve(entry.target);
+            }
+        });
+    }, options);
+
+    sections.forEach(section => {
+        // Hide the inner content initially for animation
+        const animatableElement = section.querySelector('div');
+        if(animatableElement) {
+           animatableElement.style.opacity = '0';
+        }
+        observer.observe(section);
+    });
+
+});

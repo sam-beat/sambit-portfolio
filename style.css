@@ -28,3 +28,101 @@ body {
 section {
     opacity: 0;
 }
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap');
+
+body {
+    font-family: 'Inter', sans-serif;
+}
+
+.gradient-text {
+    background: linear-gradient(90deg, #EC4899, #8B5CF6);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+.hero-section {
+    min-height: 80vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-image: radial-gradient(circle at top left, theme('colors.indigo.900/40') 0%, transparent 30%),
+                      radial-gradient(circle at bottom right, theme('colors.pink.900/40') 0%, transparent 30%);
+}
+
+/* Navigation */
+.nav-link {
+    @apply text-gray-300 hover:text-pink-400 transition-colors duration-300 text-base font-medium;
+}
+.mobile-nav-link {
+    @apply block py-3 px-6 text-base text-gray-300 hover:bg-gray-800 transition-colors duration-300;
+}
+
+/* Buttons */
+.contact-btn {
+    @apply bg-indigo-600 hover:bg-indigo-700 text-white font-semibold px-5 py-2 rounded-lg transition-all duration-300 shadow-lg shadow-indigo-600/20 hover:shadow-xl hover:shadow-indigo-600/40;
+}
+.primary-btn {
+    @apply inline-block bg-pink-600 hover:bg-pink-700 text-white font-bold py-3 px-8 rounded-lg transition-transform transform hover:scale-105 duration-300 shadow-lg shadow-pink-600/30;
+}
+.secondary-btn {
+    @apply inline-block bg-gray-700 hover:bg-gray-600 text-white font-bold py-3 px-8 rounded-lg transition-transform transform hover:scale-105 duration-300;
+}
+
+/* Sections */
+.section-title {
+    @apply text-4xl font-bold text-center mb-12 gradient-text;
+}
+
+/* Cards */
+.glass-card {
+    background: rgba(31, 41, 55, 0.5); /* bg-gray-800 with 50% opacity */
+    backdrop-filter: blur(10px);
+    border: 1px solid rgba(75, 85, 99, 0.5); /* border-gray-600 with 50% opacity */
+}
+.highlight-item {
+    @apply flex items-center;
+}
+.highlight-item::before {
+    content: '✓';
+    @apply text-teal-400 mr-3 font-bold;
+}
+
+.experience-card {
+    @apply bg-gray-800/60 p-6 rounded-xl border border-gray-700/80 transition-all duration-300 hover:border-pink-500/50 hover:shadow-2xl hover:shadow-pink-900/30;
+}
+
+.skill-card {
+    @apply bg-gray-800/60 p-6 rounded-xl border border-gray-700/80 text-center;
+}
+.skill-title {
+    @apply text-xl font-bold mb-4 text-indigo-400;
+}
+.tech-badge {
+    @apply bg-gray-700 text-gray-300 text-sm font-medium px-3 py-1 rounded-full;
+}
+
+.time-badge {
+    @apply text-sm font-semibold px-3 py-1 rounded-full mt-2 md:mt-0;
+}
+
+.social-icon {
+    @apply text-gray-400 text-2xl hover:text-pink-400 transition-transform duration-300 hover:scale-110;
+}
+
+/* Animation */
+.fade-in-up {
+    opacity: 0;
+    transform: translateY(20px);
+    animation: fadeInUp 0.8s ease-out forwards;
+}
+
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
